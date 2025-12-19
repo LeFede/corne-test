@@ -1,35 +1,160 @@
 layout: {zmk_keyboard: corne}
 layers:
-  default: [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC, LCTRL, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, N, M, ',', ., /, ESC, LGUI, lower, SPACE, RET,
-    raise, RALT]
-  lower:
-  - TAB
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
+  Base:
+  - ''
+  - {t: Q, h: TmuxPane}
+  - {t: W, h: TmuxWin}
+  - E
+  - R
+  - {t: T, h: Tmux}
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ''
+  - ''
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LSHFT}
+  - {t: F, h: LCTRL}
+  - {t: G, h: WinNum}
+  - {t: H, s: Gui+LEFT}
+  - {t: J, h: RCTRL, s: Gui+DOWN}
+  - {t: K, h: RSHFT, s: Gui+UP}
+  - {t: L, h: RALT, s: Gui+RIGHT}
+  - {t: ;, h: RGUI}
+  - ''
+  - ''
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ''
+  - BT
+  - Numpad
+  - SPACE
+  - {t: RET, h: Nav}
+  - {t: BSPC, h: Mouse}
+  - DEL
+  Numpad:
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '['
+  - ']'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '7'
   - '8'
   - '9'
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - '{'
+  - '}'
+  - (
+  - )
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
-  - BSPC
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Mouse:
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&msc SCRL_UP'
+  - '&msc SCRL_DOWN'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  Nav:
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - LEFT
   - DOWN
   - UP
   - RIGHT
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&studio_unlock'
-  - '&studio_unlock'
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -39,52 +164,313 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LGUI
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - SPACE
-  - RET
   - {t: ▽, type: trans}
-  - RALT
-  raise:
-  - TAB
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - BSPC
-  - LCTRL
+  - {t: ▽, type: trans}
+  WinNum:
+  - ''
+  - '&win_shift_q'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '-'
-  - '='
-  - '['
-  - ']'
-  - \
-  - '`'
-  - LSHFT
+  - {t: '&win_7', h: '&win_shift_7'}
+  - {t: '&win_8', h: '&win_shift_8'}
+  - {t: '&win_9', h: '&win_shift_9'}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - _
-  - +
-  - '{'
-  - '}'
-  - '|'
-  - '~'
-  - LGUI
-  - {t: ▽, type: trans}
-  - SPACE
-  - RET
   - {type: held}
-  - RALT
+  - {t: ▽, type: trans}
+  - {t: '&win_4', h: '&win_shift_4'}
+  - {t: '&win_5', h: '&win_shift_5'}
+  - {t: '&win_6', h: '&win_shift_6'}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&win_0', h: '&win_shift_0'}
+  - {t: '&win_1', h: '&win_shift_1'}
+  - {t: '&win_2', h: '&win_shift_2'}
+  - {t: '&win_3', h: '&win_shift_3'}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Tmux:
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_copy_mode'
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - '&tmux_s'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_percent'
+  - '&tmux_quote'
+  - '&tmux_semicolon'
+  - ''
+  - ''
+  - '&tmux_z'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_comma'
+  - '&tmux_dot'
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  TmuxWin:
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_win_7'
+  - '&tmux_win_8'
+  - '&tmux_win_9'
+  - '&tmux_win_prev'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_win_4'
+  - '&tmux_win_5'
+  - '&tmux_win_6'
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_win_next'
+  - '&tmux_win_1'
+  - '&tmux_win_2'
+  - '&tmux_win_3'
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  TmuxPane:
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_pane_7'
+  - '&tmux_pane_8'
+  - '&tmux_pane_9'
+  - '&tmux_pane_prev'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_pane_4'
+  - '&tmux_pane_5'
+  - '&tmux_pane_6'
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&tmux_pane_next'
+  - '&tmux_pane_1'
+  - '&tmux_pane_2'
+  - '&tmux_pane_3'
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  BT:
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [19, 20]
+  k: ESC
+- p: [27, 28, 31]
+  k: '!'
+- p: [27, 28, 32]
+  k: '@'
+- p: [27, 28, 33]
+  k: '#'
+- p: [27, 28, 19]
+  k: $
+- p: [27, 28, 20]
+  k: '%'
+- p: [27, 28, 21]
+  k: ^
+- p: [27, 28, 7]
+  k: '&'
+- p: [27, 28, 8]
+  k: '*'
+- p: [27, 28]
+  k: '='
+- p: [31, 32]
+  k: '-'
+- p: [32, 33]
+  k: ''''
+- p: [32, 33, 34]
+  k: \
+- p: [31, 32, 33]
+  k: '`'
+- p: [19, 20, 21]
+  k: TAB
+- p: [5, 30]
+  k: '&tmux_new_window'
+- p: [14, 30]
+  k: '&tmux_new_session'
+- p: [1, 40]
+  k: '&tmux_kill_pane'
+- p: [2, 40]
+  k: '&tmux_kill_window'
+- p: [36, 31]
+  k: F1
+- p: [36, 32]
+  k: F2
+- p: [36, 33]
+  k: F3
+- p: [36, 19]
+  k: F4
+- p: [36, 20]
+  k: F5
+- p: [36, 21]
+  k: F6
+- p: [36, 7]
+  k: F7
+- p: [36, 8]
+  k: F8
+- p: [36, 9]
+  k: F9
+- p: [36, 34]
+  k: F10
+- p: [36, 22]
+  k: F11
+- p: [36, 10]
+  k: F12
+- p: [31, 32, 13]
+  k: '{'
+- p: [31, 32, 14]
+  k: '}'
+- p: [31, 32, 15]
+  k: (
+- p: [31, 32, 16]
+  k: )
+- p: [31, 32, 3]
+  k: '['
+- p: [31, 32, 4]
+  k: ']'
+- p: [38, 28]
+  k: Ctl+Sft+V
+- p: [38, 8]
+  k: Ctl+F8
+- p: [38, 7]
+  k: Ctl+Sft+F8
+- p: [38, 27]
+  k: Ctl+Sft+C
+- p: [15, 16]
+  k: {t: LSHFT, h: sticky}
+- p: [14, 15, 16]
+  k: CAPS
