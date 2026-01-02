@@ -681,11 +681,6 @@
                         key-positions = <19 20 21>;
                         bindings = <&kp TAB>;
                 };
-                combo_tmux_new_win {
-                        timeout-ms = <50>;
-                        key-positions = <5 30>;
-                        bindings = <&tmux_new_window>;
-                };
                 combo_tmux_new_session {
                         timeout-ms = <50>;
                         key-positions = <14 30>;
@@ -905,12 +900,12 @@
 // -----------------------------------------------------------------------------------------
 // |NONE |     |     | C-SPC [ |     |  T  |   |     |     |     |     |     |NONE |
 // |NONE |     |C-SPC S|  |     |     |   |     |     | C-SPC %| C-SPC "| C-SPC ;|NONE |
-// |NONE |C-SPC Z|  |     |     |     |   |     |     | C-SPC , | C-SPC . |     |NONE |
+// |NONE |C-SPC Z|  |     |     |     |   |NEW WIN|     | C-SPC , | C-SPC . |     |NONE |
 //                  |     |     |     |   |     |     |     |
                         bindings = <
-   &none  &trans   &trans  &tmux_copy_mode   &trans   &trans           &trans    &trans        &trans        &trans           &trans           &none
-   &none  &trans   &tmux_s &trans   &trans   &trans           &trans    &trans        &tmux_percent &tmux_quote      &tmux_semicolon  &none
-   &none  &tmux_z  &trans  &trans   &trans   &trans           &trans    &trans        &tmux_comma   &tmux_dot        &trans           &none
+   &none  &trans   &trans  &tmux_copy_mode   &trans   &trans           &trans             &trans        &trans        &trans           &trans           &none
+   &none  &trans   &tmux_s &trans   &trans   &trans           &trans             &trans        &tmux_percent &tmux_quote      &tmux_semicolon  &none
+   &none  &tmux_z  &trans  &trans   &trans   &trans           &tmux_new_window   &trans        &tmux_comma   &tmux_dot        &trans           &none
                                     &trans   &trans   &trans      &trans   &trans    &trans
                         >;
                 };
